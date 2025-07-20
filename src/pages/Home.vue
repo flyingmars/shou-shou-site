@@ -47,11 +47,11 @@
         <p class="gallery-subtitle">{{ t('home.gallery.subtitle') }}</p>
         
         <div class="photo-grid">
-          <div class="photo-item" v-for="n in 8" :key="n">
+          <div class="photo-item" v-for="(image, index) in sortedImageList" :key="index">
             <div class="photo-container">
               <img 
-                :src="`/src/assets/space-photo/0${n}.jpg`" 
-                :alt="`ShouShou 咖啡館空間照片 ${n}`"
+                :src="image as string" 
+                :alt="`ShouShou 咖啡館空間照片 ${index}`"
                 class="space-photo"
                 @error="handleImageError"
               >
@@ -93,6 +93,12 @@
 
 <script setup lang="ts">
 import { useI18n } from '../composables/useI18n'
+const images = import.meta.glob('/src/assets/space-photo/*.jpg', { eager: true, import: 'default' })
+
+// 提取路徑值並排序（依檔名順序）
+const sortedImageList = Object.entries(images)
+  .sort(([a], [b]) => a.localeCompare(b))
+  .map(([, value]) => value)
 
 const { t } = useI18n()
 

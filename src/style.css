@@ -440,6 +440,10 @@ body {
 }
 
 /* About Page */
+.about {
+  overflow-x: hidden;
+}
+
 .dream-beginning {
   padding: 4rem 0;
 }
@@ -453,6 +457,14 @@ body {
 
 .story-content.reverse {
   grid-template-columns: 1fr 1fr;
+}
+
+.story-content.reverse .story-image {
+  order: 1;
+}
+
+.story-content.reverse .story-text {
+  order: 2;
 }
 
 .story-text h2 {
@@ -982,9 +994,64 @@ body {
     grid-template-columns: 1fr;
   }
 
+  /* About Page Mobile Styles */
+  .dream-beginning,
+  .reality-turn,
+  .love-and-dream,
+  .store-concept,
+  .our-belief,
+  .business-info {
+    padding: 2.5rem 0;
+  }
+
   .story-content {
     grid-template-columns: 1fr;
     text-align: center;
+    gap: 2rem;
+  }
+
+  .story-content.reverse {
+    grid-template-columns: 1fr;
+  }
+
+  .story-text h2 {
+    font-size: 2rem;
+  }
+
+  .story-text p {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .image-placeholder {
+    width: 200px;
+    height: 200px;
+    font-size: 5rem;
+  }
+
+  .turn-content h2 {
+    font-size: 2rem;
+  }
+
+  .turn-content p {
+    font-size: 1rem;
+  }
+
+  .belief-content h2 {
+    font-size: 2rem;
+  }
+
+  .belief-text {
+    font-size: 1rem;
+  }
+
+  .quote {
+    font-size: 1.1rem;
+  }
+
+  .quote-box {
+    padding: 1.5rem;
+    margin: 0 1rem;
   }
 
   .contact-content {
@@ -1054,5 +1121,83 @@ body {
   .gallery-subtitle {
     font-size: 1rem;
     margin-bottom: 2rem;
+  }
+
+  /* About Page Small Mobile Styles */
+  .dream-beginning,
+  .reality-turn,
+  .love-and-dream,
+  .store-concept,
+  .our-belief,
+  .business-info {
+    padding: 2rem 0;
+  }
+
+  .story-text h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+  }
+
+  .story-text p {
+    font-size: 0.95rem;
+    line-height: 1.6;
+  }
+
+  .image-placeholder {
+    width: 150px;
+    height: 150px;
+    font-size: 4rem;
+  }
+
+  .turn-content h2,
+  .belief-content h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+  }
+
+  .turn-content p,
+  .belief-text {
+    font-size: 0.95rem;
+    line-height: 1.6;
+  }
+
+  .quote {
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+
+  .quote-box {
+    padding: 1rem;
+    border-radius: 10px;
+  }
+
+  .concept-card {
+    padding: 1.5rem;
+  }
+
+  .concept-card h3 {
+    font-size: 1.3rem;
+  }
+
+  .concept-card p {
+    font-size: 0.9rem;
+  }
+
+  .concept-icon {
+    font-size: 2.5rem;
+  }
+
+  .info-card {
+    padding: 1.5rem;
+  }
+
+  .info-card h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.8rem;
+  }
+
+  .info-card p {
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
   }
 } 
