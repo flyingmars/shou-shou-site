@@ -17,13 +17,13 @@ const routes = [
   { path: '/contact', component: Contact }
 ]
 
-// 建立路由器
+// 建立路由器，⚠️ 使用 base URL 讓 GitHub Pages 能正確顯示子路徑
 const router = createRouter({
-  history: createWebHistory(),
+  history: createWebHistory(import.meta.env.BASE_URL),
   routes
 })
 
 // 建立並掛載應用程式
 createApp(App)
   .use(router)
-  .mount('#app') 
+  .mount('#app')
